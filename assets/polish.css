@@ -1,0 +1,52 @@
+/* Shared finish: stable type, even controls, reader lock */
+html{scroll-behavior:smooth;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
+body{font-family:Inter,system-ui,sans-serif;line-height:1.5}
+button,.btn,.mini-btn,.tool,.editor-bar button,.nav a{
+  box-sizing:border-box;
+  min-height:34px;
+  padding:0 12px;
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  gap:6px;
+  border:1px solid #6d8794;
+  background:#101920;
+  color:#e7f2f6;
+  font:600 11px/1 Inter,system-ui,sans-serif !important;
+  letter-spacing:.08em;
+  text-transform:uppercase;
+  border-radius:0;
+  cursor:pointer;
+  text-decoration:none;
+  vertical-align:middle;
+}
+.nav a{border-color:transparent;background:transparent;min-height:32px;letter-spacing:.12em}
+button:hover,.btn:hover,.mini-btn:hover,.tool:hover,.editor-bar button:hover{border-color:#d5e4ea;color:#fff}
+.btn.primary,.tool.primary{background:#1c303a;border-color:#8eb0be}
+.editor-bar{display:flex;align-items:center;gap:8px;padding:8px}
+.editor-bar button,.modal-actions .mini-btn{min-width:108px}
+html.reader .editor-bar,
+html.reader #editFamilyMode,
+html.reader #editRelationMode,
+html.reader #addFamily,
+html.reader #addRelation,
+html.reader #addRelationNode,
+html.reader #familyArrange,
+html.reader #relationArrange,
+html.reader .toolbar,
+html.reader .modebar,
+html.reader #editor,
+html.reader #bbInput,
+html.reader #saveEntry,
+html.reader #cancelEdit,
+html.reader .subtools,
+html.reader #sceneEditor,
+html.reader .composer,
+html.reader [data-edit],
+html.reader [data-del],
+html.reader .cast-remove,
+html.reader .totem-import-row,
+html.reader #clearTotems,
+html.reader #modalDelete,
+html.reader #modalSave{display:none !important}
+html.reader [contenteditable="true"]{caret-color:transparent}
