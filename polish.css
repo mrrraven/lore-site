@@ -1,0 +1,83 @@
+/* Shared finish: stable type, even controls, reader lock */
+html{scroll-behavior:smooth;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
+body{font-family:Inter,system-ui,sans-serif;line-height:1.5}
+button,.btn,.mini-btn,.tool,.editor-bar button,.nav a{
+  box-sizing:border-box;
+  min-height:34px;
+  padding:0 12px;
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  gap:6px;
+  border:1px solid #6d8794;
+  background:#101920;
+  color:#e7f2f6;
+  font:600 11px/1 Inter,system-ui,sans-serif !important;
+  letter-spacing:.08em;
+  text-transform:uppercase;
+  border-radius:0;
+  cursor:pointer;
+  text-decoration:none;
+  vertical-align:middle;
+}
+.nav a{border-color:transparent;background:transparent;min-height:32px;letter-spacing:.12em}
+button:hover,.btn:hover,.mini-btn:hover,.tool:hover,.editor-bar button:hover{border-color:#d5e4ea;color:#fff}
+.btn.primary,.tool.primary{background:#1c303a;border-color:#8eb0be}
+.editor-bar{display:flex;align-items:center;gap:8px;padding:8px}
+.editor-bar button,.modal-actions .mini-btn{min-width:108px}
+html.reader .editor-bar,
+html.reader #editFamilyMode,
+html.reader #editRelationMode,
+html.reader #addFamily,
+html.reader #addRelation,
+html.reader #addRelationNode,
+html.reader #familyArrange,
+html.reader #relationArrange,
+html.reader .toolbar,
+html.reader .modebar,
+html.reader #editor,
+html.reader #bbInput,
+html.reader #saveEntry,
+html.reader #cancelEdit,
+html.reader .subtools,
+html.reader #sceneEditor,
+html.reader .composer,
+html.reader [data-edit],
+html.reader [data-del],
+html.reader .cast-remove,
+html.reader .totem-import-row,
+html.reader #clearTotems,
+html.reader #modalDelete,
+html.reader #modalSave{display:none !important}
+html.reader [contenteditable="true"]{caret-color:transparent}
+
+#authBtn{position:fixed;right:18px;bottom:18px;z-index:80;min-width:92px}
+#editBtn{position:fixed;right:120px;bottom:18px;z-index:80;min-width:150px}
+#editBtn[hidden]{display:none}
+html.owner .editor-bar{bottom:62px}
+.owner-only{display:none}
+html.owner .owner-only{display:flex;gap:8px;margin:0 0 12px}
+.gallery-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}
+.shot{margin:0;position:relative;background:#09121a;border:1px solid #6e8a972d;min-height:220px}
+.shot img{width:100%;height:240px;object-fit:cover;display:block;cursor:zoom-in}
+.shot-del{position:absolute;right:8px;top:8px;min-height:28px;padding:0 8px}
+#lightbox{position:fixed;inset:0;z-index:200;display:none;align-items:center;justify-content:center;background:rgba(4,8,12,.88);padding:40px}
+#lightbox.show{display:flex}
+#lightbox img{max-width:min(1100px,92vw);max-height:86vh;object-fit:contain;box-shadow:0 20px 60px #000a}
+#lightClose{position:absolute;top:16px;right:16px}
+html.owner [data-live]{outline:1px dashed transparent}
+html.owner [data-live]:hover, html.owner [data-live]:focus{outline-color:#8eb0be}
+@media(max-width:800px){.gallery-grid{grid-template-columns:1fr 1fr}}
+
+#publishBtn{position:fixed;right:280px;bottom:18px;z-index:80;min-width:132px}
+#publishBtn[hidden]{display:none}
+#authModal{position:fixed;inset:0;z-index:240;display:flex;align-items:center;justify-content:center;background:rgba(6,10,14,.72);backdrop-filter:blur(8px);padding:24px}
+.auth-card{width:min(440px,92vw);background:#f4efe6;color:#1c1916;border:1px solid #e0d5c6;box-shadow:0 30px 80px #000a;padding:28px 28px 22px}
+.auth-kicker{font:600 10px/1 Inter,sans-serif;letter-spacing:.16em;color:#8d847b}
+.auth-card h3{margin:12px 0 8px;font:600 32px/1 "Source Serif 4",Georgia,serif}
+.auth-card p{margin:0 0 16px;color:#5c534c;font:15px/1.5 "Source Serif 4",Georgia,serif}
+.auth-card label{display:block;margin:10px 0 6px;font:600 10px/1 Inter,sans-serif;letter-spacing:.12em;text-transform:uppercase;color:#8d847b}
+.auth-card input{width:100%;height:40px;border:1px solid #d9cec0;background:#fbf7f1;color:#1c1916;padding:0 12px;font:16px/1 "Source Serif 4",Georgia,serif}
+.auth-error{color:#8d3a34 !important;min-height:1.2em}
+.auth-actions{display:flex;justify-content:flex-end;gap:8px;margin-top:8px}
+.auth-actions button{min-width:108px}
